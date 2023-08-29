@@ -1,7 +1,6 @@
 package com.kosa.restservice.user;
 
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -29,8 +28,6 @@ public class UserService {
                 return user;
             }
         }
-
-
         return null;
     }
 
@@ -39,7 +36,6 @@ public class UserService {
             user.setId(++userCount);
         }
         users.add(user);
-
         return user;
     }
 
@@ -56,5 +52,4 @@ public class UserService {
         }
         return null;
     }
-
 }

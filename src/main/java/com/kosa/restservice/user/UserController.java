@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 public class UserController {
     private UserService service;
+
     public UserController(UserService service){
         this.service = service;
     }
@@ -23,8 +24,6 @@ public class UserController {
         return service.findAll();
     }
 
-
-
     @GetMapping("/users/{id}")
     public User retrieveOneUser(@PathVariable int id){
         User user = service.findOne(id);
@@ -33,7 +32,6 @@ public class UserController {
             throw new UserNotFoundException(String.format("ID[%s] not found", id));
         }
         return user;
-
     }
 
     @PostMapping("/users")
