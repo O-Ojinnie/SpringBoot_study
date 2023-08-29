@@ -13,9 +13,9 @@ public class UserService {
     private static int userCount = 3;
 
     static {
-        users.add(new User(1, "kosa", new Date()));
-        users.add(new User(2, "douzon", new Date()));
-        users.add(new User(3, "naver", new Date()));
+        users.add(new User(1, "kosa", new Date(), "psw1", "701010-1111111"));
+        users.add(new User(2, "douzon", new Date(), "psw2", "701010-1111111"));
+        users.add(new User(3, "naver", new Date(), "psw3", "701010-1111111"));
     }
 
     public List<User> findAll(){
