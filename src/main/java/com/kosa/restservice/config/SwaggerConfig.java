@@ -1,6 +1,6 @@
 package com.kosa.restservice.config;
 
-import jdk.javadoc.doclet.Doclet;
+
 import org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties;
 import org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties;
 import org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType;
@@ -27,9 +27,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-
 @Configuration
-//@EnableSwagger2
 public class SwaggerConfig {
     public static final String AUTHORIZATION_HEADER = "Authorization";
 
