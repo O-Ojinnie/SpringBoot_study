@@ -28,5 +28,9 @@ public class UserController {
         service.save(user);
     }
 
-
+    @PostMapping ("/users/{id}/posts")
+    public void createPost(@PathVariable int id, @RequestBody Post post){
+        post.setUser_id(id);
+        service.savePost(post);
+    }
 }

@@ -12,7 +12,7 @@ public class UserService {
     private UserMapper mapper;
 
     public List<User> findAll(){
-        return mapper.findAllUser();
+        return mapper.findAllUsers();
     }
 
     public User findOne(int id){return mapper.findUser(id);}
@@ -20,5 +20,9 @@ public class UserService {
     public User save(User user){
         mapper.createUser(user);
         return user;
+    }
+
+    public void savePost(Post post){
+        mapper.createPost(post);
     }
 }
