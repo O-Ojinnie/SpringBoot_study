@@ -7,13 +7,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -37,4 +35,16 @@ public class User {
     private String password;
     //@JsonIgnore
     private String ssn;
+
+    //mappedBy를 사용하여 mapping 되어있는 객체명으로 연결
+    @OneToMany(mappedBy = "user")
+    private List<Post> posts;
+
+    public User(Integer id, String name, Date joinDate, String password, String ssn) {
+        this.id = id;
+        this.name = name;
+        this.joinDate = joinDate;
+        this.password = password;
+        this.ssn = ssn;
+    }
 }
