@@ -11,4 +11,4 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   #  default ?? ??
-  type-aliases-package: com.kosa.restservice2.user.User
+  type-aliases-package: com.kosa.restservice2.user
