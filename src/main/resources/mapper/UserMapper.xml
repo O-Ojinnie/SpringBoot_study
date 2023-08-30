@@ -6,10 +6,18 @@
 <mapper namespace="com.kosa.restservice2.user.UserMapper">
 
 
-    <select id="findAllUsers" resultType="User">
+    <select id="findAllUser" resultType="User">
         select * from users
     </select>
-    
+
+    <select id="findUser" resultType="User">
+        select * from users where id = #{id}
+    </select>
+
+    <insert id="createUser" parameterType="User">
+        insert into users(id, name, joinDate, password, ssn)
+        values(user_seq.nextval, #{name}, sysdate, #{password}, #{ssn})
+    </insert>
 
 </mapper>
 

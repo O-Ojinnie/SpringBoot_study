@@ -14,4 +14,11 @@ public class UserService {
     public List<User> findAll(){
         return mapper.findAllUser();
     }
+
+    public User findOne(int id){return mapper.findUser(id);}
+
+    public User save(User user){
+        mapper.createUser(user);
+        return user;
+    }
 }
