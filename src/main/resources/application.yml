@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:XE
+    username: douzon
+    password: 1234
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  #  default ?? ??
+  type-aliases-package: com.kosa.restservice2.user.User
